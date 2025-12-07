@@ -1,0 +1,253 @@
+
+.footer {
+  background-color: var(--color-medical-dark);
+  color: var(--color-white);
+}
+
+.main {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-16) var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .main {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-10);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-6);
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-teal-500));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-white);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logoSubtitle {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-teal-400);
+  margin-top: -0.25rem;
+}
+
+.description {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--spacing-6);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+}
+
+.location svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-teal-400);
+}
+
+.columnTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-6);
+  color: var(--color-white);
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.link {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--color-white);
+}
+
+.contactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.contactItem svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-teal-400);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-1);
+}
+
+.contactLink {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-base);
+}
+
+.contactLink:hover {
+  color: var(--color-white);
+}
+
+.contactText {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-sm);
+}
+
+.contactText:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.contactText.closed {
+  color: var(--color-gray-400);
+}
+
+.bottom {
+  border-top: 1px solid var(--color-gray-800);
+}
+
+.bottomContent {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-6) var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .bottomContent {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}
+
+@media (min-width: 768px) {
+  .bottomContent {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bottomContent {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+}
+
+.tagline {
+  color: var(--color-gray-400);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    text-align: left;
+  }
+}
+
+.brand {
+  color: var(--color-teal-400);
+  font-weight: 500;
+}
+
+.copyright {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+}

@@ -1,0 +1,225 @@
+
+.metrics {
+  position: relative;
+  padding: var(--spacing-20) 0;
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700), var(--color-teal-700));
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .metrics {
+    padding: var(--spacing-28) 0;
+  }
+}
+
+.bgDecoration {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.bgBlob1 {
+  position: absolute;
+  top: 5rem;
+  left: 2.5rem;
+  width: 18rem;
+  height: 18rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-full);
+  filter: blur(60px);
+}
+
+.bgBlob2 {
+  position: absolute;
+  bottom: 5rem;
+  right: 2.5rem;
+  width: 24rem;
+  height: 24rem;
+  background-color: var(--color-teal-300);
+  border-radius: var(--radius-full);
+  filter: blur(60px);
+}
+
+.dotPattern1 {
+  position: absolute;
+  top: 2.5rem;
+  right: 5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-3);
+  opacity: 0.2;
+}
+
+.dotPattern2 {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-3);
+  opacity: 0.15;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-full);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+  position: relative;
+  z-index: var(--z-base);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: var(--spacing-4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gridSecondRow {
+  display: grid;
+  gap: var(--spacing-6);
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .gridSecondRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridSecondRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-6);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cardIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-4);
+}
+
+.cardIcon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--color-white);
+}
+
+.cardValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+  .cardValue {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+.cardLabel {
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--font-size-sm);
+}
