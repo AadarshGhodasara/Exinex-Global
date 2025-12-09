@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aadarshghodasara.github.io/Exinex-Global",
+  "homepage": "https://exinexglobal.com/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
