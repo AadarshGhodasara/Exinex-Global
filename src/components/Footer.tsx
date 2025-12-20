@@ -151,8 +151,8 @@ export function Footer() {
                 <PhoneIcon />
                 <div className={styles.contactContent}>
                   <span className={styles.contactLabel}>Phone</span>
-                  <a href="tel:+91XXXXXXXXXX" className={styles.contactLink}>
-                    +91-6355929510
+                  <a href="tel:+918320970639" className={styles.contactLink}>
+                    +91-8320970639
                   </a>
                 </div>
               </li>
@@ -161,7 +161,7 @@ export function Footer() {
                 <div className={styles.contactContent}>
                   <span className={styles.contactLabel}>Business Hours</span>
                   <p className={styles.contactText}>
-                    Mon – Sat: 9:00 AM – 7:00 PM
+                    Mon - Sat: 9:00 AM - 7:00 PM
                   </p>
                   <p className={`${styles.contactText} ${styles.closed}`}>
                     Sunday: Closed
@@ -177,7 +177,7 @@ export function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomContent}>
           <p className={styles.tagline}>
-            <span className={styles.brand}>Exinex Global</span> – Delivering
+            <span className={styles.brand}>Exinex Global</span> - Delivering
             Trust, Quality, and Global Trade Excellence.
           </p>
           <p className={styles.copyright}>
