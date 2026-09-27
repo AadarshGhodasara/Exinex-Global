@@ -36,7 +36,7 @@ const metrics = [
   },
 ];
 
-const markets = ["Russia", "Kazakhstan", "Azerbaijan"];
+const markets = ["Vietnam", "Malaysia", "South Korea", "Indonesia"];
 
 export function Metrics() {
   return (
