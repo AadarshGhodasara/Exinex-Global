@@ -22,7 +22,9 @@
 .showcase__tabs-wrap {
   margin-top: 40px;
   overflow-x: auto;
+  overflow-y: hidden;
   border-bottom: 1px solid var(--slate-200);
+  -webkit-overflow-scrolling: touch;
 }
 .showcase__tabs {
   display: flex;
