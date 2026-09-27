@@ -1,7 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Import CSS Variables and Global Styles */
-@import './styles/variables.css';
-@import './styles/global.css';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --navy: #0a2463;
+  --navy-950: #051338;
+  --navy-900: #071b4d;
+  --navy-700: #163a8a;
+  --navy-100: #e3e9f6;
+  --navy-50: #f2f5fb;
+  --gold: #d4af37;
+  --gold-600: #b08f22;
+  --gold-300: #e6cb73;
+  --gold-100: #f8f0d6;
+  --mist: #f5f7fa;
+  --ink: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', 'Inter', sans-serif;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* ---------- Shared: headings ---------- */
+.section-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--navy-950);
+}
+.section-title--light {
+  color: #fff;
+}
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+/* ---------- Shared: buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out);
+}
+.btn--sm {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.btn--gold {
+  background: var(--gold);
+  color: var(--navy-950);
+}
+.btn--gold:hover {
+  background: var(--gold-300);
+}
+.btn--ghost-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.btn--ghost-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn--navy {
+  background: var(--navy);
+  color: #fff;
+}
+.btn--navy:hover {
+  background: var(--navy-700);
+}
+.btn--outline {
+  background: transparent;
+  border-color: var(--slate-300);
+  color: var(--navy);
+}
+.btn--outline:hover {
+  border-color: var(--navy);
+}
+.btn__icon {
+  transition: transform 200ms var(--ease-out);
+}
+.btn:hover .btn__icon {
+  transform: translateX(4px);
+}
+/* ---------- Shared: chips & check lists ---------- */
+.chip-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  border-radius: 6px;
+  background: var(--navy-50);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--navy-700);
+}
+.chip--md {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--slate-700);
+}
+.check-icon {
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gold-100);
+  color: var(--gold-600);
+}
+/* ---------- Shared: product grid ---------- */
+.product-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,30 @@
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(5, 19, 56, 0.7);
+}
+.marquee__track {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+.marquee__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}

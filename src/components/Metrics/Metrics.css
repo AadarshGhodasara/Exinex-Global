@@ -1,0 +1,113 @@
+.metrics {
+  padding: 96px 0;
+  background: var(--navy-950);
+  color: #fff;
+}
+.metrics__grid {
+  display: grid;
+  gap: 64px;
+}
+.metrics__lead {
+  max-width: 28rem;
+  margin: 16px 0 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.7);
+}
+.metrics__hero {
+  margin-top: 40px;
+}
+.metrics__hero-value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--gold);
+}
+.metrics__hero-label {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.metrics__markets {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.metrics__markets-title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.metrics__market-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.metrics__market {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+}
+.metrics__market--more {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  background: transparent;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+.metrics__stats {
+  display: grid;
+  align-content: center;
+  gap: 1px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.metrics__stat {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: var(--navy-950);
+}
+.metrics__stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.metrics__stat-value {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+}
+.metrics__stat-note {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 640px) {
+  .metrics__hero-value {
+    font-size: 96px;
+  }
+  .metrics__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metrics__stat--wide {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .metrics {
+    padding: 128px 0;
+  }
+  .metrics__grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}
